@@ -32,6 +32,7 @@ cmp.setup({
 		{ name = 'luasnip' }, -- For luasnip users.
 		-- { name = 'ultisnips' }, -- For ultisnips users.
 		-- { name = 'snippy' }, -- For snippy users.
+		{ name = 'emoji' },
 	}, {
 		{ name = 'buffer' },
 	})
@@ -77,7 +78,6 @@ local servers = {
 	'rust_analyzer',
 	'pyright',
 	'tsserver',
-	-- markdown
 	-- 'grammarly',
 	'marksman'
 }
