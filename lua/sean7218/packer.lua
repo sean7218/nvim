@@ -13,50 +13,38 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- You can alias plugin names
-  use {'dracula/vim', as = 'dracula'}
+  use { 'Mofiqul/dracula.nvim' }
 
-  -- color tokyonight
-  use({
-	  'folke/tokyonight.nvim',
-	  as = 'tokyonight',
-	  config = function()
-	--	    vim.cmd('colorscheme tokyonight-moon')
-	  end
-  })
+	use { 'lewis6991/gitsigns.nvim' }
 
-   -- color rose pine
-   use({ 
-	   'rose-pine/neovim',
-	   as = 'rose-pine',
-	   config = function()
-		   -- vim.cmd('colorscheme rose-pine')
-	   end
-   })
-   
-   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+	}
 
-   use({
-	   'VonHeikemen/lsp-zero.nvim',
-	   branch = 'v1.x',
-	   requires = {
-		   -- LSP Support
-		   {'neovim/nvim-lspconfig'},             -- Required
-		   {'williamboman/mason.nvim'},           -- Optional
-		   {'williamboman/mason-lspconfig.nvim'}, -- Optional
+	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
+	use('nvim-treesitter/playground')
 
-		   -- Autocompletion
-		   {'hrsh7th/nvim-cmp'},         -- Required
-		   {'hrsh7th/cmp-nvim-lsp'},     -- Required
-		   {'hrsh7th/cmp-buffer'},       -- Optional
-		   {'hrsh7th/cmp-path'},         -- Optional
-		   {'saadparwaiz1/cmp_luasnip'}, -- Optional
-		   {'hrsh7th/cmp-nvim-lua'},     -- Optional
+	use({
+		-- LSP Support
+		{'neovim/nvim-lspconfig'},             -- Required
+		{'williamboman/mason.nvim'},           -- Optional
+		{'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-		   -- Snippets
-		   {'L3MON4D3/LuaSnip'},             -- Required
-		   {'rafamadriz/friendly-snippets'}, -- Optional
-	   }
-   })
+		-- Autocompletion
+		{'hrsh7th/nvim-cmp'},         -- Required
+		{'hrsh7th/cmp-nvim-lsp'},     -- Required
+		{'hrsh7th/cmp-buffer'},       -- Optional
+		{'hrsh7th/cmp-path'},         -- Optional
+		{'saadparwaiz1/cmp_luasnip'}, -- Optional
+		{'hrsh7th/cmp-nvim-lua'},     -- Optional
+
+		-- Snippets
+		{'L3MON4D3/LuaSnip'},             -- Required
+		{'rafamadriz/friendly-snippets'}, -- Optional
+
+		-- null-ls
+		{'jose-elias-alvarez/null-ls.nvim'}
+	})
 
 end)
