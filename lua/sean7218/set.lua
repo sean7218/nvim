@@ -1,29 +1,28 @@
+
+vim.opt.nu = true
+vim.opt.relativenumber = true
+
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.expandtab = true
+vim.opt.smartindent = true
+
+vim.opt.wrap = false
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+vim.opt.termguicolors = true
+
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
+
+vim.opt.updatetime = 50
 vim.g.mapleader = " "
-
-local options = {
-	wrap = false,
-	undodir = os.getenv("HOME") .. "/.vim/undodir",
-	undofile = true,
-	termguicolors = true,
-	scrolloff = 8,
-	signcolumn = "yes",
-	updatetime = 50,
-	tabstop = 2,
-	softtabstop = 2,
-	smartindent = true,
-	shiftwidth = 2,
-	nu = true,
-	relativenumber = true,
-	hlsearch = false,
-	incsearch = true,
-	swapfile = false,
-	backup = false,
-	guifont = "monospace:h17",  -- the font used in graphical neovim applications
-
-}
-
-for k, v in pairs(options) do
-	vim.opt[k] = v
-end
