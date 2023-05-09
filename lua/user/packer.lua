@@ -46,7 +46,16 @@ return require('packer').startup(function(use)
 		{'rafamadriz/friendly-snippets'}, -- Optional
 
 		-- null-ls
-		{'jose-elias-alvarez/null-ls.nvim'}
+		{'jose-elias-alvarez/null-ls.nvim'},
+
+		-- nvim tree
+		use {
+			'nvim-tree/nvim-tree.lua',
+			requires = {
+				'nvim-tree/nvim-web-devicons',
+			},
+		}
 	})
+
 
 end)

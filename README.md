@@ -7,5 +7,12 @@
 3. install telescope and `ripgrep` for its dependency
 
 4. install treesitter
+    - some
+    - other
+    - **maybe**
 
+> hello
+
+
+**maybe**
 
