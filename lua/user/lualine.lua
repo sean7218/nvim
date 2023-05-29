@@ -6,7 +6,7 @@ require('lualine').setup {
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
-      statusline = {},
+      statusline = { "NvimTree" },
       winbar = {},
     },
     ignore_focus = {},
@@ -33,7 +33,7 @@ require('lualine').setup {
 					hint = '',
 				},
 				always_visible = false,
-				padding = 0,
+				padding = 2,
 			},
 		},
     lualine_c = {'filename'},
