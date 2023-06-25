@@ -3,19 +3,19 @@ vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true,
 
 vim.g.copilot_filetypes = {
 	["*"] = false,
-	["javascript"] = true,
-	["typescript"] = true,
+	["javascript"] = false,
+	["typescript"] = false,
 	["lua"] = false,
-	["rust"] = true,
-	["c"] = true,
+	["rust"] = false,
+	["c"] = false,
 	["c#"] = true,
-	["c++"] = true,
-	["cpp"] = true,
+	["c++"] = false,
+	["cpp"] = false,
 	["cmake"] = true,
 	["bzl"] = true,
 	["go"] = true,
 	["python"] = true,
-	["swift"] = true,
-	["md"] = true
+	["swift"] = false,
+	["md"] = false
 }
 

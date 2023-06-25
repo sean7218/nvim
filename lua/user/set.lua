@@ -1,29 +1,28 @@
+local set = vim.opt
 
-vim.opt.nu = true
-vim.opt.relativenumber = true
+set.nu = true
+set.relativenumber = true
 
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.expandtab = true
-vim.opt.smartindent = true
+set.autoindent = true
+set.smartindent = true
+set.tabstop = 2
+set.softtabstop = 2
+set.shiftwidth = 2
+set.expandtab = true
+set.wrap = true
+set.swapfile = false
+set.backup = false
+set.undodir = os.getenv("HOME") .. "/.vim/undodir"
+set.undofile = true
 
-vim.opt.wrap = false
+set.hlsearch = false
+set.incsearch = true
 
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
+set.termguicolors = true
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+set.scrolloff = 8
+set.signcolumn = "yes"
+set.isfname:append("@-@")
+set.updatetime = 50
 
-vim.opt.termguicolors = true
-
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
-
-vim.opt.updatetime = 50
 vim.g.mapleader = " "
--- vim.opt.guifont='coda'
