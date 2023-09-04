@@ -3,7 +3,6 @@ require("mason-lspconfig").setup({
 	ensure_installed = { "lua_ls", "rust_analyzer", "marksman" },
 })
 
-
 local cmp = require'cmp'
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = {
@@ -72,12 +71,24 @@ local lspconfig = require('lspconfig')
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = {
 	'lua_ls',
-	'clangd',
-	'rust_analyzer',
+	-- 'rust_analyzer',
 	'pyright',
 	'tsserver',
 	-- 'grammarly',
 	'marksman'
+}
+
+require("lspconfig").rust_analyzer.setup {
+  capabilities = capabilities
+};
+
+require("lspconfig").clangd.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = {
+    "clangd",
+    "--offset-encoding=utf-16",
+  },
 }
 
 for _, lsp in ipairs(servers) do

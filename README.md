@@ -15,4 +15,8 @@
 
 
 **maybe**
+ ✓ Moved nvim-web-devicons: /Users/sean7218/.local/share/nvim/site/pack/packer/start/nvim-web-devicons → /Users/sean7218/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons
+
+
+  ✓ Moved nvim-web-devicons: /Users/sean7218/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons → /Users/sean7218/.local/share/nvim/site/pack/packer/start/nvim-web-devicons
 
