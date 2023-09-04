@@ -20,7 +20,7 @@ bufferline.setup{
 			local icon, hl = require('nvim-web-devicons').get_icon_by_filetype(element.filetype, { default = false })
 			return icon, hl
 		end,
-		tab_size = 18,
+		tab_size = 20,
 		color_icons = true,
 		separator_style = {'', ''},
 		offsets = {
@@ -33,3 +33,12 @@ bufferline.setup{
 		}
 	}
 }
+
+function close_all_buffers ()
+	for _, e in ipairs(bufferline.get_elements().elements) do
+		vim.schedule(function()
+			vim.cmd("bd ".. e.id)
+		end)
+	end
+end
+
