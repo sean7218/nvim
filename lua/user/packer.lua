@@ -7,6 +7,9 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+	-- for some reason, lua can't load with require for 'nvim-tree/nvim-web-devicons'
+	use {'kyazdani42/nvim-web-devicons'}
+
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	  -- or                          , branch = '0.1.x',

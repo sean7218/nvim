@@ -1,6 +1,7 @@
 require('user.bufferline')
 require('user.colors')
 -- require('user.copilot')
+require('user.nvim-web-devicons')
 require('user.fonts')
 require('user.gitsigns')
 require('user.lsp')

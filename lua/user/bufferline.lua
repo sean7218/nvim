@@ -10,14 +10,18 @@ bufferline.setup{
 		indicator = {
 			style = 'none'
 		},
-		themable = true,
+		themable = false,
 		numbers = "none",
 		name_formatter = function(buf)
 			return buf.name
 		end,
-		tab_size = 16,
-		color_icons = true,
 		show_buffer_icons = true,
+		get_element_icon = function(element)
+			local icon, hl = require('nvim-web-devicons').get_icon_by_filetype(element.filetype, { default = false })
+			return icon, hl
+		end,
+		tab_size = 18,
+		color_icons = true,
 		separator_style = {'', ''},
 		offsets = {
 			{
